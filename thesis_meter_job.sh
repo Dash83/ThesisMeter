@@ -29,4 +29,10 @@ $python_bin "$plot_script" "$data_file" "$output_file"
 
 #TODO: Figure-count figure
 
+#Commit changes to repo
+cd $repo_dir
+git add *
+git commit -a -m "Daily data update"
+git push origin master
+
 echo "ThesisMeter job ran OK!"
