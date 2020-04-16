@@ -4,7 +4,7 @@ import sys
 import os.path
 
 def usage():
-    print("python plot.py DATA_FILE OUTPUT_FILE")
+    print("python plot_word_count.py DATA_FILE OUTPUT_FILE")
 
 def main(data_file, output_file):
     ds = pd.read_csv(data_file)

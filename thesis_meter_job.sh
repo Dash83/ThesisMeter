@@ -13,6 +13,7 @@ export count=$(detex "$MAIN_THESIS_FILE" | wc -w | xargs)
 echo "$d,$count" >> "$DATA_FILE"
 
 #Word count figure
+echo python "$PLOT_SCRIPT" "$DATA_FILE" "$FIG_WORD_COUNT" 
 python "$PLOT_SCRIPT" "$DATA_FILE" "$FIG_WORD_COUNT" 
 
 #TODO: word delta figure
@@ -30,3 +31,4 @@ git push --repo https://$GIT_USER:$GIT_PWD@github.com/$GIT_USER/ThesisMeter.git
 # git push origin master
 
 echo "$(date) - ThesisMeter job ran OK!"
+echo ""
