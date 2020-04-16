@@ -13,8 +13,7 @@ export count=$(detex "$MAIN_THESIS_FILE" | wc -w | xargs)
 echo "$d,$count" >> "$DATA_FILE"
 
 #Word count figure
-echo python "$PLOT_SCRIPT" "$DATA_FILE" "$FIG_WORD_COUNT" 
-python "$PLOT_SCRIPT" "$DATA_FILE" "$FIG_WORD_COUNT" 
+python "$PLOT_WORD_COUNT" "$DATA_FILE" "$FIG_WORD_COUNT" 
 
 #TODO: word delta figure
 
