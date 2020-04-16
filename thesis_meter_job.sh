@@ -1,8 +1,10 @@
 #!/bin/bash
 #Set a PATH manually
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/opt/python/libexec/bin/python:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin/
+export PATH=/usr/local/opt/python/libexec/bin/:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin/
 
 # Import configurations
+export REPO_DIR="/Users/marco/Documents/Github/ThesisMeter"
+cd $REPO_DIR
 source config
 
 #Extract the daily data
@@ -18,7 +20,6 @@ python "$PLOT_SCRIPT" "$DATA_FILE" "$FIG_WORD_COUNT"
 #TODO: Figure-count figure
 
 #Commit changes to repo
-cd $REPO_DIR
 git add *
 git commit -a -m "Daily data update"
 # Push command using user/pwd authentication.
@@ -28,4 +29,4 @@ git push --repo https://$GIT_USER:$GIT_PWD@github.com/$GIT_USER/ThesisMeter.git
 # your github password in the config file.
 # git push origin master
 
-echo "ThesisMeter job ran OK!"
+echo "$(date) - ThesisMeter job ran OK!"
