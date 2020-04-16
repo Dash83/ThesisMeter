@@ -1,0 +1,21 @@
+#!/bin/bash
+
+####################################
+# Set these variables appropriately
+####################################
+export THESIS_DIR="/Users/marco/Documents/Github/Thesis"
+export REPO_DIR="/Users/marco/Documents/Github/ThesisMeter"
+export PYTHON="/usr/local/opt/python/libexec/bin/python"
+# The main thesis file that includes all others
+export MAIN_THESIS_FILE="$THESIS_DIR/thesis.tex"
+# The data file in which statistics will be appended every day
+export DATA_FILE="$REPO_DIR/data.csv"
+# The path of the figure that will be produced
+export FIG_WORD_COUNT="$REPO_DIR/word_count.png"
+# Path to the script that plots the results. It's in the repo.
+export PLOT_WORD_COUNT="$REPO_DIR/plot_word_count.py"
+#GIT configuration
+export GIT="/usr/local/bin/git"
+export GIT_USER=""
+export GIT_PWD=""
+
