@@ -8,8 +8,10 @@ cd $REPO_DIR
 source config
 
 #Extract the daily data
+pushd $THESIS_DIR
 export d=$(date "+%d/%m/%y")
 export count=$(detex "$MAIN_THESIS_FILE" | wc -w | xargs)
+popd
 echo "$d,$count" >> "$DATA_FILE"
 
 #Word count figure
