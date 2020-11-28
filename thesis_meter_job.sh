@@ -9,7 +9,7 @@ source config
 
 #Extract the daily data
 pushd $THESIS_DIR
-export d=$(date "+%d/%m/%y")
+export d=$(date "+%Y-%m-%d")
 export count=$(detex "$MAIN_THESIS_FILE" | wc -w | xargs)
 popd
 echo "$d,$count" >> "$DATA_FILE"
