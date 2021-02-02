@@ -24,8 +24,9 @@ def main(data_file, output_file):
     y_axis=ds.axes[1][1]
     plt.plot(ds[x_axis], ds[y_axis])
     plt.xticks(ticks, months, rotation=45)
-    #plt.xlabel(x_axis)
+    plt.xlabel('Time')
     plt.ylabel(y_axis)
+    plt.grid(axis='y')
     plt.savefig(output_file)
 
 if __name__ == "__main__":
