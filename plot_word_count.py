@@ -22,11 +22,17 @@ def main(data_file, output_file):
 
     x_axis=ds.axes[1][0]
     y_axis=ds.axes[1][1]
-    plt.plot(ds[x_axis], ds[y_axis])
+    
+    # Prepare the axes
     plt.xticks(ticks, months, rotation=45)
     plt.xlabel('Time')
     plt.ylabel(y_axis)
     plt.grid(axis='y')
+    
+    # Plot the data
+    plt.plot(ds[x_axis], ds[y_axis])
+
+    # Save the figure
     plt.savefig(output_file)
 
 if __name__ == "__main__":
