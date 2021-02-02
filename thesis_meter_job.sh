@@ -3,7 +3,7 @@
 export PATH=/usr/local/opt/python/libexec/bin/:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin/
 
 # Import configurations
-export REPO_DIR="/Users/marco/Documents/Github/ThesisMeter"
+export REPO_DIR="/Users/marco/Documents/Github/PhD/ThesisMeter"
 cd $REPO_DIR
 source config
 
